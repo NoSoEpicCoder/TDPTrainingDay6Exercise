@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>CD List</title>
+</head>
+<body>
+
+<table>
+    <th:block th:each="cd : ${cds}">
+        <tr>
+            <td th:text="${cd.name}">...</td>
+            <td th:text="${cd.description}">...</td>
+            <td th:text="${cd.genre}">...</td>
+        </tr>
+        <tr>
+            <td colspan="2" th:text="${cd.price}">...</td>
+        </tr>
+    </th:block>
+</table>
+
+</body>
+</html>

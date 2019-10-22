@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<link href = "css/style.css" rel = "stylesheet"/>
+<head>
+    <meta charset="UTF-8">
+    <title>The result of your search</title>
+</head>
+<body>
+
+<table>
+    <th:block th:each="searchItem : ${searchItems}">
+        <tr>
+            <td th:text="${searchItem.name}">...</td>
+            <td th:text="${searchItem.description}">...</td>
+        </tr>
+        <tr>
+            <td colspan="2" th:text="${searchItem.price}">...</td>
+        </tr>
+    </th:block>
+</table>
+
+</body>
+</html>
