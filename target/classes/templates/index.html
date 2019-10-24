@@ -19,14 +19,13 @@
 <h4>To view all cds in stock click the link</h4>
 <a th:href="@{/cdlist}">Click here to list all cds</a>
 
-<form action="/searchByName">
-    <h4>Search by name</h4>
-    <input type="text" name="token"><br>
-    <input type="submit" value="Submit">
-</form>
-
-<form action="/searchByDescription">
-    <h4>Search by description</h4>
+<!-- pass the value of the searchtype from here for when calling the search method -->
+<form action="/searchItem">
+    <h4>Search by name or description</h4>
+    <select>
+        <option value="name">Name</option>
+        <option value="description">Description</option>
+    </select>
     <input type="text" name="token"><br>
     <input type="submit" value="Submit">
 </form>
