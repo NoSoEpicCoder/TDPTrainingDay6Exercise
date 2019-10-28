@@ -1,10 +1,10 @@
 package com.accenture.modules.item;
 
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.MappedSuperclass;
 
-@MappedSuperclass
+@Entity
 public abstract class Item {
 
     @GeneratedValue
