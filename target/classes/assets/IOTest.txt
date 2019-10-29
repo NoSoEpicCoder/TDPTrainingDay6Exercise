@@ -1,0 +1,14 @@
+Type	ID	Name	Description	Price	ISBN	Author/Genre
+Book	000001	Java for beginers	Start Java	25.00	978-0136976335	Carl
+CD	000002	Rolling pebbles	Hard metal	12.00	Rock
+Book	000003	Java for intermediate	Continue Java	35.00	978-0136976335	Charles
+Book	000004	Java for beginners	Its a long book	20.00	978-0136976335	James
+Book	000005	Java for noobs	Get rekt by Java kid	120.00	978-0136976335	Bob
+Book	000006	Python is King	Become a god	35.00	978-0136976335	God
+Book	000007	A book	Pages with words	24.00	978-0136976335	A person
+Book	000008	C	Learn C	50.00	978-0136976335	Charlie
+CD	000009	Soy Boys	Like hard metal but soft	10.00	Soft metal
+CD	000010	The caveman	Back in my day we used to...	15.00	Ancient music
+CD	000011	1800's best hits	The good'ol classics	59.00	Classic
+CD	000012	Soda pop	Modern pop but overly sweet like soda	20.00	Pop
+CD	000013	Whitenoice	Just complete silence	12.00	Relaxing

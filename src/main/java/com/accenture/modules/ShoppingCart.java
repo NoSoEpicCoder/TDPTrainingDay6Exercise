@@ -1,6 +1,4 @@
-package com.accenture.modules.cart;
-
-import com.accenture.modules.item.Item;
+package com.accenture.modules;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

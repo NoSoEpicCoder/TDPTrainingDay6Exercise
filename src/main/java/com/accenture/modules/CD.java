@@ -1,6 +1,5 @@
-package com.accenture.modules.cd;
+package com.accenture.modules;
 
-import com.accenture.modules.item.Item;
 import javax.persistence.Entity;
 
 @Entity
@@ -12,8 +11,8 @@ public class CD extends Item {
         super();
     }
 
-    public CD(String name, String description, double price, String genre){
-        super(name, description, price);
+    public CD(int id, String name, String description, double price, String genre){
+        super(id, name, description, price);
         this.genre = genre;
     }
 

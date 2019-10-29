@@ -1,4 +1,4 @@
-package com.accenture.modules.customer;
+package com.accenture.modules;
 
 public class Customer {
 

@@ -1,6 +1,6 @@
 package com.accenture.service;
 
-import com.accenture.modules.cd.CD;
+import com.accenture.modules.CD;
 import com.accenture.repository.CDRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ public class CDService {
         return cdRepository.findAll();
     }
 
-    public CD getCD(Long id){
+    public CD getCD(Integer id){
         return cdRepository.findById(id).orElse(null);
     }
 

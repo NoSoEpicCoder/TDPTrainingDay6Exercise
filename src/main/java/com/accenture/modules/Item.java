@@ -1,15 +1,13 @@
-package com.accenture.modules.item;
+package com.accenture.modules;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.Entity;
 
 @Entity
 public abstract class Item {
 
-    @GeneratedValue
     @Id
-    protected Long id;
+    private int id;
     protected String name;
     protected String description;
     protected double price;
@@ -17,10 +15,19 @@ public abstract class Item {
     public Item(){
     }
 
-    public Item(String name, String description, double price){
+    public Item(int id, String name, String description, double price){
+        this.id = id;
         this.name = name;
         this.description = description;
         this.price = price;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {

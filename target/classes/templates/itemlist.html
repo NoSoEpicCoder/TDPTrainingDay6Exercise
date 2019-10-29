@@ -9,13 +9,16 @@
 <body>
 
 <table>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Description</td>
+    </tr>
     <th:block th:each="item : ${items}">
         <tr>
+            <td th:text="${item.id}">...</td>
             <td th:text="${item.name}">...</td>
             <td th:text="${item.description}">...</td>
-        </tr>
-        <tr>
-            <td colspan="2" th:text="${item.price}">...</td>
         </tr>
     </th:block>
 </table>

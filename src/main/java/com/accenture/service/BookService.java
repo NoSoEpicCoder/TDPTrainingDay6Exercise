@@ -1,6 +1,6 @@
 package com.accenture.service;
 
-import com.accenture.modules.book.*;
+import com.accenture.modules.Book;
 import com.accenture.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ public class BookService {
         return bookRepository.findAll();
     }
 
-    public Book getBook(Long id){
+    public Book getBook(Integer id){
         return bookRepository.findById(id).orElse(null);
     }
 

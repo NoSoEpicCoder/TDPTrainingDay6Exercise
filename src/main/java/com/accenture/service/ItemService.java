@@ -1,6 +1,6 @@
 package com.accenture.service;
 
-import com.accenture.modules.item.Item;
+import com.accenture.modules.Item;
 import com.accenture.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +15,7 @@ public class ItemService {
         return itemRepository.findAll();
     }
 
-    public Item getItem(Long id){
+    public Item getItem(Integer id){
         return itemRepository.findById(id).orElse(null);
     }
 
