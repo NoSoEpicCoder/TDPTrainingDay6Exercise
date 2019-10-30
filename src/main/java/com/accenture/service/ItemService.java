@@ -5,14 +5,20 @@ import com.accenture.repository.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ItemService {
 
     @Autowired
     ItemRepository itemRepository;
 
-    public Iterable<Item> getAllItems(){
+    public Iterable<Item> getAll(){
         return itemRepository.findAll();
+    }
+
+    public List<Item> getAllByType(String type){
+        return itemRepository.findAllByType(type.toUpperCase());
     }
 
     public Item getItem(Integer id){

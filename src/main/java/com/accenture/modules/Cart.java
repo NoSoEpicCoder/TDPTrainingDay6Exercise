@@ -6,7 +6,7 @@ import javax.persistence.Id;
 import java.util.LinkedList;
 
 @Entity
-public class ShoppingCart {
+public class Cart {
 
     @GeneratedValue @Id
     private Long id;

@@ -10,15 +10,18 @@
 
 <table>
     <tr>
+        <td>Type</td>
         <td>ID</td>
         <td>Name</td>
         <td>Description</td>
     </tr>
     <th:block th:each="item : ${items}">
         <tr>
+            <td th:text="${item.type}">...</td>
             <td th:text="${item.id}">...</td>
             <td th:text="${item.name}">...</td>
             <td th:text="${item.description}">...</td>
+            <td><button type="button" class="btn btn-default" th:onclick="'addToCart()'" >Add To Cart</button></td>
         </tr>
     </th:block>
 </table>

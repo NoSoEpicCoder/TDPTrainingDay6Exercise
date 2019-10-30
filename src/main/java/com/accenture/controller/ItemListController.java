@@ -12,9 +12,18 @@ public class ItemListController {
     @Autowired
     ItemService itemService;
 
+//    @Autowired
+//    ShoppingCart cart;
+
     @RequestMapping(value = "/itemlist")
     public String itemlist(Model model) {
-        model.addAttribute("items", itemService.getAllItems());
+        model.addAttribute("items", itemService.getAll());
         return "/itemlist";
     }
+
+    /*@RequestMapping(method = RequestMethod.GET, value = "/cartview"){
+        public void buyItem(@RequestBody Item item){
+            cart.addItemToCart(item);
+        }
+    }*/
 }

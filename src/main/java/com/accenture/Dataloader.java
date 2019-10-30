@@ -2,8 +2,6 @@ package com.accenture;
 
 import com.accenture.modules.Book;
 import com.accenture.modules.CD;
-import com.accenture.service.BookService;
-import com.accenture.service.CDService;
 import com.accenture.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,12 +12,6 @@ import java.io.*;
 
 @Component
 public class Dataloader {
-
-    @Autowired
-    private BookService bookService;
-
-    @Autowired
-    private CDService cdService;
 
     @Autowired
     private ItemService itemService;
@@ -42,10 +34,10 @@ public class Dataloader {
                 lineParts = line.split("\t");
                 if(lineParts[0].equalsIgnoreCase("book")){
                     Book book = new Book(Integer.parseInt(lineParts[1]), lineParts[2], lineParts[3], Double.parseDouble(lineParts[4]), lineParts[5], lineParts[6]);
-                    bookService.save(book);
+                    itemService.save(book);
                 } else if(lineParts[0].equalsIgnoreCase("cd")){
                     CD cd = new CD(Integer.parseInt(lineParts[1]), lineParts[2], lineParts[3], Double.parseDouble(lineParts[4]), lineParts[5]);
-                    cdService.save(cd);
+                    itemService.save(cd);
                 }
             }
             bufferedReader.close();

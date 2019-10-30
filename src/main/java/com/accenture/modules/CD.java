@@ -13,6 +13,7 @@ public class CD extends Item {
 
     public CD(int id, String name, String description, double price, String genre){
         super(id, name, description, price);
+        this.type = "CD";
         this.genre = genre;
     }
 

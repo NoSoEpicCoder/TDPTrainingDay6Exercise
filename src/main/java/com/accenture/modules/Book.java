@@ -14,6 +14,7 @@ public class Book extends Item {
 
     public Book(int id, String name, String description, double price, String isbn, String author){
         super(id, name, description, price);
+        this.type = "BOOK";
         this.isbn = isbn;
         this.author = author;
     }

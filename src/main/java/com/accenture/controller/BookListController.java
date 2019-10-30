@@ -1,23 +1,20 @@
 package com.accenture.controller;
 
-import com.accenture.service.BookService;
+import com.accenture.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class BookListController {
 
     @Autowired
-    private BookService bookService;
+    private ItemService itemService;
 
     @RequestMapping(value = "/booklist")
     public String booklist(Model model) {
-        model.addAttribute("books", bookService.getAllBooks());
+        model.addAttribute("books", itemService.getAllByType("book"));
         return "/booklist";
     }
 

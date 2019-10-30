@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 @Entity
 public abstract class Item {
 
+    protected String type;
     @Id
     private int id;
     protected String name;
@@ -20,6 +21,14 @@ public abstract class Item {
         this.name = name;
         this.description = description;
         this.price = price;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
     }
 
     public int getId() {
