@@ -1,0 +1,6 @@
+projectKey=com.accenture:TDPTrainingDay6Exercise
+serverUrl=http://localhost:9000
+serverVersion=8.0.0.29455
+dashboardUrl=http://localhost:9000/dashboard?id=com.accenture%3ATDPTrainingDay6Exercise
+ceTaskId=AW4igvqvaelOYMLUqSIk
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AW4igvqvaelOYMLUqSIk

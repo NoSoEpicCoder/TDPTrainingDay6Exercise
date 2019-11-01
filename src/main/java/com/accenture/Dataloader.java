@@ -3,6 +3,8 @@ package com.accenture;
 import com.accenture.modules.Book;
 import com.accenture.modules.CD;
 import com.accenture.service.ItemService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.core.io.Resource;
@@ -24,6 +26,8 @@ public class Dataloader {
         fileReader();
     }
 
+    private Logger logger = LoggerFactory.getLogger(Dataloader.class);
+
     private void fileReader(){
         String line;
         String[] lineParts;
@@ -33,16 +37,14 @@ public class Dataloader {
             while ((line = bufferedReader.readLine()) != null){
                 lineParts = line.split("\t");
                 if(lineParts[0].equalsIgnoreCase("book")){
-                    Book book = new Book(Integer.parseInt(lineParts[1]), lineParts[2], lineParts[3], Double.parseDouble(lineParts[4]), lineParts[5], lineParts[6]);
-                    itemService.save(book);
+                    itemService.save(new Book(Integer.parseInt(lineParts[1]), lineParts[2], lineParts[3], Double.parseDouble(lineParts[4]), lineParts[5], lineParts[6]));
                 } else if(lineParts[0].equalsIgnoreCase("cd")){
-                    CD cd = new CD(Integer.parseInt(lineParts[1]), lineParts[2], lineParts[3], Double.parseDouble(lineParts[4]), lineParts[5]);
-                    itemService.save(cd);
+                    itemService.save(new CD(Integer.parseInt(lineParts[1]), lineParts[2], lineParts[3], Double.parseDouble(lineParts[4]), lineParts[5]));
                 }
             }
             bufferedReader.close();
         } catch (Exception e){
-            e.printStackTrace();
+            logger.error("Error in "+ Dataloader.class, e);
         }
     }
 }
